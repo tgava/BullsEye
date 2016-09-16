@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         targetValue = 1 + Int(arc4random_uniform(100))
  */
-        startNewRound()
+        startNewGame()
         updateLabels()
     }
 
@@ -40,7 +40,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func startOver() {
+        startNewGame()
+        updateLabels()
+    }
+    
     @IBAction func showAlert() {
         
         //calculate the difference between slider value and target value
@@ -64,16 +68,39 @@ class ViewController: UIViewController {
             difference = 0
         }
         */
-        let points = 100 - difference
-        score += points
+        var points = 100 - difference
+       
         
-        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe difference is: \(difference)" + "\nYou scored : \(points)"
-        let alert = UIAlertController(title: "Hello,friend", message: message, preferredStyle: .alert)
-        let action =  UIAlertAction(title: "OK", style: .default, handler: nil)
+        let title: String
+        if difference == 0 {
+            title = "Perfect!"
+            points += 100
+        } else if difference < 5 {
+            title = "You almost had it!"
+            if difference == 1 {
+                points += 50
+            }
+        } else if difference < 10 {
+            title = "Pretty good"
+        } else {
+            title = "Not even close!.."
+        }
+         score += points
+        
+        // let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe difference is: \(difference)" + "\nYou scored : \(points)"
+        
+        let message = "You scored : \(points) points"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let action =  UIAlertAction(title: "OK", style: .default, handler: {action in
+            self.startNewRound()
+            self.updateLabels()}
+            )
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        startNewRound()
-        updateLabels()
+        //startNewRound()
+        //updateLabels()
         
     }
     //function for slider moved event:
@@ -87,6 +114,12 @@ class ViewController: UIViewController {
     targetValue = 1 + Int(arc4random_uniform(100))
     currentValue = 50
     slider.value = Float(currentValue)
+    }
+    
+    func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
     }
     
     func updateLabels() {
