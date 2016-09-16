@@ -106,6 +106,8 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="roundLabel" destination="yRM-l6-e88" id="MIQ-RD-VWK"/>
+                        <outlet property="scoreLabel" destination="i17-H7-DoY" id="7ho-Zh-6sg"/>
                         <outlet property="slider" destination="Osp-Tg-a7C" id="BmX-Iw-RRZ"/>
                         <outlet property="targetLabel" destination="I5t-6Y-Ibl" id="NuC-JT-OO8"/>
                     </connections>
