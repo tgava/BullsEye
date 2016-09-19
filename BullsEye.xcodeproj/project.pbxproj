@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5900D1821D90130100EDE544 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 5900D1811D90130100EDE544 /* BullsEye.html */; };
 		591ECBA81D8C261A0052AF27 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591ECBA71D8C261A0052AF27 /* AboutViewController.swift */; };
 		5985999F1D8844C9007EF106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985999E1D8844C9007EF106 /* AppDelegate.swift */; };
 		598599A11D8844C9007EF106 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598599A01D8844C9007EF106 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5900D1811D90130100EDE544 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = BullsEye.html; path = "../../../../../Google Drive/Learning_Material/Ray/iOS/Raywenderlich The iOS Apprentice Beginning iOS Development with Swift 2 4th Edition/The iOS Apprentice 1 - Getting Started/Resources/BullsEye.html"; sourceTree = "<group>"; };
 		591ECBA71D8C261A0052AF27 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		5985999B1D8844C9007EF106 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5985999E1D8844C9007EF106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		5985999D1D8844C9007EF106 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				5900D1811D90130100EDE544 /* BullsEye.html */,
 				5985999E1D8844C9007EF106 /* AppDelegate.swift */,
 				598599A01D8844C9007EF106 /* ViewController.swift */,
 				591ECBA71D8C261A0052AF27 /* AboutViewController.swift */,
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				598599A91D8844C9007EF106 /* LaunchScreen.storyboard in Resources */,
+				5900D1821D90130100EDE544 /* BullsEye.html in Resources */,
 				598599A61D8844C9007EF106 /* Assets.xcassets in Resources */,
 				598599A41D8844C9007EF106 /* Main.storyboard in Resources */,
 			);

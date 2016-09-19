@@ -28,10 +28,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //e.g getting the initial value of slider and storing in currentValue
         currentValue = lroundf(slider.value)
+         // as well as dressing up the slider UI elements
+         
         //and the need for a random target value
         
         targetValue = 1 + Int(arc4random_uniform(100))
  */
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImageHighLighted = UIImage(named: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumbImageHighLighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        if let trackLeftImage = UIImage(named: "SliderTrackLeft") {let trackLeftResizable =              trackLeftImage.resizableImage(withCapInsets: insets)
+            slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+            }
+        if let trackRightImage = UIImage(named: "SliderTrackRight") {let trackRightResizable =              trackRightImage.resizableImage(withCapInsets: insets)
+            slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+        }
         startNewGame()
         updateLabels()
     }
